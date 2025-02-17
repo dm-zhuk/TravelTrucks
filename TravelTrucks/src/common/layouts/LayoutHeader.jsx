@@ -1,49 +1,49 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import styles from "./index.module.css";
-import favicon from "../img/favicon.svg";
+import css from "./index.module.css";
+import favicon from "../components/img/favicon.png";
 
 const SharedLayout = () => {
   return (
     <>
-      <div className={styles.sharedHeader}>
-        <div className={styles.headerContainer}>
-          <div className={styles.headerNav}>
+      <div className={css.sharedHeader}>
+        <div className={css.headerContainer}>
+          <div className={css.headerNav}>
             <img src={favicon} alt="Logo" width="36" height="auto" />
-            <NavLink to="/" className={styles.headerLogo}>
-              TRAVEL-<span className={styles.headerLogoAccent}>TRUCKS</span>
+            <NavLink to="/" className={css.headerLogo}>
+              TRAVEL-<span className={css.headerLogoAccent}>TRUCKS</span>
             </NavLink>
 
-            <ul className={styles.headerNavList}>
-              <li className={styles.headerNavItem}>
+            <ul className={css.headerNavList}>
+              <li className={css.headerNavItem}>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? `${styles.headerNavItemLink} ${styles.active}`
-                      : styles.headerNavItemLink
+                      ? `${css.headerNavItemLink} ${css.active}`
+                      : css.headerNavItemLink
                   }>
                   Home
                 </NavLink>
               </li>
-              <li className={styles.headerNavItem}>
+              <li className={css.headerNavItem}>
                 <NavLink
                   to="/catalog"
                   className={({ isActive }) =>
                     isActive
-                      ? `${styles.headerNavItemLink} ${styles.active}`
-                      : styles.headerNavItemLink
+                      ? `${css.headerNavItemLink} ${css.active}`
+                      : css.headerNavItemLink
                   }>
                   Catalog
                 </NavLink>
               </li>
-              <li className={styles.headerNavItem}>
+              <li className={css.headerNavItem}>
                 <NavLink
                   to="/favorites"
                   className={({ isActive }) =>
                     isActive
-                      ? `${styles.headerNavItemLink} ${styles.active}`
-                      : styles.headerNavItemLink
+                      ? `${css.headerNavItemLink} ${css.active}`
+                      : css.headerNavItemLink
                   }>
                   Favorites
                 </NavLink>
@@ -51,19 +51,17 @@ const SharedLayout = () => {
             </ul>
           </div>
 
-          <div className={styles.headerContacts}>
-            <ul className={styles.headerContactsList}>
+          <div className={css.headerContacts}>
+            <ul className={css.headerContactsList}>
               <li>
                 <a
                   href="mailto:info@camperrental.com"
-                  className={styles.headerContactsLink}>
+                  className={css.headerContactsLink}>
                   info@camperrental.com
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:+380631234567"
-                  className={styles.headerContactsLink}>
+                <a href="tel:+380631234567" className={css.headerContactsLink}>
                   +380 (63) 123-45-67
                 </a>
               </li>
@@ -72,7 +70,7 @@ const SharedLayout = () => {
         </div>
       </div>
 
-      <div className={styles.sharedPageCtnr}>
+      <div className={css.sharedPageCtnr}>
         <Outlet />
       </div>
     </>
